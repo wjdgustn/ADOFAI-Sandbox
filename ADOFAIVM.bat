@@ -4,6 +4,8 @@ set ADOFAIDir=D:\SteamLibrary\steamapps\common\A Dance of Fire and Ice
 @echo off
 title ADOFAIVM
 
+cd %temp%
+
 if not exist "%ADOFAIDir%" set ADOFAIDir=C:\Program Files (x86)\Steam\steamapps\common\A Dance of Fire and Ice
 
 if not exist "%ADOFAIDir%" (
