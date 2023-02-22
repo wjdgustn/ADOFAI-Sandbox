@@ -1,5 +1,9 @@
+REM You can edit below values
 set memory=8192
 set ADOFAIDir=D:\SteamLibrary\steamapps\common\A Dance of Fire and Ice
+
+REM Do not edit below!!!
+set version=1
 
 @echo off
 title ADOFAIVM
@@ -19,14 +23,15 @@ goto enterDir
 )
 )
 
-if not exist ADOFAIVM mkdir ADOFAIVM
+set mainDir=ADOFAIVM%version%
+if not exist %mainDir% mkdir %mainDir%
 
-cd ADOFAIVM
+cd %mainDir%
 
 if not exist adofai.wsb (
 echo ^<Configuration^>
 echo   ^<VGpu^>Enable^</VGpu^>
-echo   ^<Networking^>Disable^</Networking^>
+echo   ^<Networking^>Enable^</Networking^>
 echo   ^<MappedFolders^>
 echo     ^<MappedFolder^>
 echo       ^<HostFolder^>%ADOFAIDir%^</HostFolder^>
